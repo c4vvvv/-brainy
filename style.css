@@ -86,7 +86,7 @@ body{
   padding:90px 20px;
 }
 .section-block{
-  background:#D6C6A5;
+  background:#FFF;
   border-radius:20px;
   padding:40px;
   box-shadow:0 10px 30px rgba(0,0,0,.05);
@@ -106,57 +106,7 @@ body{
   display:block;
   margin:auto;
 }
-/* =========================
-   HERO（INDEX專用）
-========================= */
-.hero{
-  position:relative;
-  height:85vh;
-  display:flex;
-  align-items:center;
-  justify-content:flex-start;
-  padding:0 8%;
-  overflow:hidden;
-  background-size:cover;
-  background-position:center;
-}
 
-
-
-.hero-box{
-  position:relative;
-  max-width:560px;
-  z-index:2;
-}
-
-.hero h1{
-  font-size:56px;
-  line-height:1.15;
-  font-weight:900;
-}
-
-.hero h2{
-  font-size:20px;
-  color:var(--muted);
-  margin:10px 0 18px;
-  font-weight:600;
-}
-
-.hero p{
-  color:var(--muted);
-  margin-bottom:24px;
-}
-
-/* TAG */
-.hero-tag{
-  display:inline-block;
-  padding:6px 14px;
-  background:var(--accent);
-  border-radius:999px;
-  font-size:13px;
-  font-weight:600;
-  margin-bottom:18px;
-}
 
 /* =========================
    BUTTON（全站統一）
@@ -179,83 +129,7 @@ body{
   transform:translateY(-2px);
 }
 
-/* =========================
-   GRID / CARD（COURSE頁）
-========================= */
-.grid{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 18px;
-}
-
-.grid .card{
-  width: calc(33.333% - 12px);
-}
-.flow{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 18px;
-}
-
-.flow .card{
-  width: 220px;
-  position: relative;
-}
-.flow .card::after{
-  content: "→";
-  position: absolute;
-  right: -18px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--muted);
-  font-size: 20px;
-}
-
-/* 最後一個不要箭頭 */
-.flow .card:last-child::after{
-  display: none;
-}
-
-
-.card{
-  background: #F3EEE4;
-  padding: 20px;
-  border-radius: 16px;
-
-  border: 1px solid rgba(201,176,138,.35);
-  box-shadow: 0 8px 18px rgba(0,0,0,.06);
-
-  font-size: 21px;
-  font-weight: 800;
-  text-align: center;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  min-height: 92px;
-
-  cursor: pointer;
-  transition: all .25s ease;
-}
-.card{
-  letter-spacing: 2px;
-}
-
-/* hover 強化「可點擊感」 */
-.card:hover{
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(0,0,0,.12);
-  border-color: var(--primary-dark);
-}
-.content-with-img{
-  display: flex;
-  flex-direction: column;
-  gap: 28px; /* 關鍵：拉開圖片與卡片 */
-  align-items: center;
-}
+/
 .section-block{
   background: linear-gradient(180deg,#ffffff,#FBF8F2);
   border: 1px solid rgba(0,0,0,.04);
@@ -278,55 +152,6 @@ body{
   margin: 12px auto 0;
   border-radius: 99px;
 }
-/* =========================
-   CTA（REGISTER頁）
-========================= */
-.cta{
-  text-align:center;
-  background:linear-gradient(135deg,#F3EEE4,#E8DDC6);
-  border-radius:22px;
-}
-
-.sub-text{
-  max-width:520px;
-  margin:10px auto 20px;
-  font-size:15px;
-  color:var(--muted);
-}
-
-/* =========================
-   SLIDER（REGISTER頁）
-========================= */
-.slider{
-  overflow:hidden;
-  max-width:520px;
-  margin:30px auto;
-  border-radius:16px;
-}
-
-.slider-track{
-  display:flex;
-  transition:transform 0.4s ease;
-}
-
-.slide{
-  min-width:100%;
-  display:flex;
-  justify-content:center;
-}
-
-.hero-img{
-  width:90%;
-  max-width:500px;
-  border-radius:16px;
-  transition:.3s;
-}
-
-.hero-img:hover{
-  transform:translateY(-8px) scale(1.03);
-  box-shadow:0 20px 40px rgba(0,0,0,0.18);
-}
-
 /* TRUST */
 .trust-row{
   display:flex;
@@ -346,111 +171,6 @@ footer{
   color:#8A7D6C;
 }
 
-/* MOBILE */
-@media(max-width:768px){
-  .profile-card{
-    flex-wrap:wrap;
-    align-items:center;
-  }
-
-  .profile-img{
-    flex:1 1 100%;
-  }
-}.profile-card{
-  display:flex;
-  gap:40px;
-  align-items:flex-start; /* 關鍵：改掉 center */
-  justify-content:center;
-
-  max-width:900px;
-  margin:30px auto 0;
-
-  flex-wrap:nowrap; /* 關鍵：禁止亂跳 */
-}
-
-/* 左側圖片 */
-.profile-img{
-  flex: 1;
-  min-width: 260px;
-  display: flex;
-  justify-content: center;
-}
-.profile-img{
-  flex:0 0 320px; /* 固定左側 */
-}
-
-.profile-info{
-  flex:1;
-}
-.profile-img img{
-  width: 100%;
-  max-width: 320px;
-  border-radius: 24px;
-  box-shadow: 0 12px 30px rgba(0,0,0,.08);
-  object-fit: cover;
-}
-
-/* 右側內容 */
-.profile-info{
-  flex: 1.2;
-  min-width: 280px;
-  text-align: left;
-}
-
-/* 小資訊區塊 */
-.profile-meta{
-  margin-top: 16px;
-  padding: 12px 16px;
-  background: #F3EEE4;
-  border-radius: 14px;
-}
-
-/* 名言 */
-.quote{
-  margin-top: 16px;
-  font-weight: 600;
-  color: #5A5145;
-  font-style: normal;
-  font-weight: 700;
-}
-.slider{
-  position:relative;
-  overflow:hidden;
-}
-
-.arrow{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  z-index:10;
-
-  width:50px;
-  height:50px;
-
-  border:none;
-  border-radius:50%;
-
-  background:rgba(255,255,255,.85);
-  color:#5A5145;
-
-  font-size:28px;
-  cursor:pointer;
-
-  box-shadow:0 4px 12px rgba(0,0,0,.12);
-  transition:.3s;
-}
-
-.arrow:hover{
-  transform:translateY(-50%) scale(1.08);
-}
-
-.left{
-  left:20px;
-}
-
-.right{
-  right:20px;
-}
 
 .logo{
   font-size:1.2rem;
@@ -470,14 +190,3 @@ footer{
   object-fit:contain;
 }
 
-.founder-card{
-  margin-top:80px;
-  padding-top:60px;
-  border-top:1px solid #E8DDC6;
-}
-
-.profile-info h3{
-  font-size:28px;
-  margin-bottom:20px;
-  font-weight:800;
-}

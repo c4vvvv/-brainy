@@ -6,37 +6,10 @@
 <title>小腦袋 Brainy｜工作坊</title>
 
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="desktop.css">
+<link rel="stylesheet" href="mobile.css">
 
-<style>
-.hero{
-  position: relative;
-  height: 85vh;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0 8%;
-  background: url("BBB.png") center/cover no-repeat;
-  overflow: hidden;
-}
 
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(
-    90deg,
-    rgba(250,247,240,.35),
-    rgba(250,247,240,.05)
-  );
-  z-index:1;
-}
-
-.hero-box{
-  position:relative;
-  max-width:560px;
-  z-index:2;
-}
-</style>
 </head>
 
 <body>
@@ -47,7 +20,9 @@
     <span>小腦袋 Brainy｜工作坊</span>
   </div>
 
-  <div class="menu">
+
+
+<div class="menu" id="menu">
     <a href="index.html">首頁</a>
     <a href="course.html">課程資訊</a>
     <a href="register.html">報名方式</a>
@@ -139,6 +114,15 @@
 </div>
 
 <footer>© 小腦袋 Brainy 工作坊</footer>
+<script>
+const toggle=document.getElementById("menuToggle");
+const menu=document.getElementById("menu");
 
+toggle.addEventListener("click",()=>{
+
+menu.classList.toggle("show");
+
+});
+</script>
 </body>
 </html>

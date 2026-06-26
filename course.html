@@ -6,6 +6,28 @@
 <title>小腦袋 Brainy｜工作坊</title>
 
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="desktop.css">
+<link rel="stylesheet" href="mobile.css">
+
+
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="logo">
+    <img src="logo1.png" alt="小腦袋 Logo">
+    <span>小腦袋 Brainy｜工作坊</span>
+  </div>
+
+
+
+<div class="menu" id="menu">
+    <a href="index.html">首頁</a>
+    <a href="course.html">課程資訊</a>
+    <a href="register.html">報名方式</a>
+  </div>
+</nav>
 
 <style>
 .hero{
@@ -41,18 +63,7 @@
 
 <body>
 
-<nav class="navbar">
-  <div class="logo">
-    <img src="logo1.png" alt="小腦袋 Logo">
-    <span>小腦袋 Brainy｜工作坊</span>
-  </div>
 
-  <div class="menu">
-    <a href="index.html">首頁</a>
-    <a href="course.html">課程資訊</a>
-    <a href="register.html">報名方式</a>
-  </div>
-</nav>
 
 <section class="section section-block">
   <h2>孩子正在面臨什麼問題?</h2>
@@ -113,5 +124,15 @@
 
 </section>
 <footer>© 小腦袋 Brainy 工作坊</footer>
+<script>
+const toggle=document.getElementById("menuToggle");
+const menu=document.getElementById("menu");
+
+toggle.addEventListener("click",()=>{
+
+menu.classList.toggle("show");
+
+});
+</script>
 </body>
 </html>
